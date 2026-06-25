@@ -49,3 +49,7 @@ math_str = [str(m) for m in math]
 print(math_str)
 print('-'.join(math_str))
 print([item[::-1] for item in math_str])
+
+password = [str(p) for p in range(10)]
+print(''.join(password))
+
