@@ -119,3 +119,9 @@ long_countries = [c for c in countries if len(c) > 5]
 short_countries = [c for c in countries if len(c) <= 5]
 upper_countreis = [c.upper() for c in countries]
 print(long_countries, short_countries, upper_countreis)
+
+age = [22, 34, 25, 11, 15, 33, 65]
+adult_age = [a for a in age if a >= 18]
+print(adult_age)
+
+
