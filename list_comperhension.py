@@ -53,3 +53,69 @@ print([item[::-1] for item in math_str])
 password = [str(p) for p in range(10)]
 print(''.join(password))
 
+friends = [f.lower() for f in ['AhMed', 'MohamEd', 'Ali', 'OsmaN']]
+neighbors = [n.lower() for n in ['Osman', 'Ahmed', 'Farah']]
+friends_neighbors = [n for n in friends if n in neighbors]
+print(friends_neighbors)
+
+text = 'my name is ahmed and i am a student'
+words = text.split()
+print(words)
+print([word.upper() for word in words])
+
+# ─── Example 1: Online Store ───────────────────────────────
+products = [
+    {"name": "Shoes",   "price": 120, "in_stock": True},
+    {"name": "Hat",     "price": 35,  "in_stock": False},
+    {"name": "Jacket",  "price": 200, "in_stock": True},
+    {"name": "Bag",     "price": 80,  "in_stock": True},
+]
+discounted = [
+    p["name"] + " → $" + str(p["price"] * 0.9)
+    for p in products
+    if p["in_stock"]
+]
+print(discounted)
+
+# ─── Example 2: School Results ─────────────────────────────
+students = [
+    {"name": "Ali",    "score": 45},
+    {"name": "Sara",   "score": 78},
+    {"name": "Khalid", "score": 90},
+    {"name": "Mona",   "score": 38},
+    {"name": "Omar",   "score": 65},
+]
+passed = [
+    s["name"] + " passed with " + str(s["score"])
+    for s in students
+    if s["score"] >= 50
+]
+print(passed)
+
+# ─── Example 3: Phone Book Cleaner ─────────────────────────
+contacts = [
+    {"name": "  Ahmed ",  "phone": "050 111 2222"},
+    {"name": "Sara  ",    "phone": "055 333 4444"},
+    {"name": "  Khalid",  "phone": "058 555 6666"},
+]
+cleaned_contacts = [
+    {"name": c["name"].strip(), "phone": c["phone"].replace(" ", "")}
+    for c in contacts
+]
+print(cleaned_contacts)
+
+# ─── Your Level: Lists + List Comprehension ────────────────
+
+countries = ["Somalia", "USA", "Brazil", "China", "UAE", "Canada"]
+long_names = [c for c in countries if len(c) > 5]
+short_names = [c for c in countries if len(c) <= 5]
+upper_names = [c.upper() for c in countries]
+print(long_names)
+print(short_names)
+print(upper_names)
+
+countries = ['ethopia', 'egypt', 'Kenya', 'tanzania', 'united states', 'united kingdom']
+long_countries = [c for c in countries if len(c) > 5]
+short_countries = [c for c in countries if len(c) <= 5]
+upper_countreis = [c.upper() for c in countries]
+print(long_countries, short_countries, upper_countreis)
