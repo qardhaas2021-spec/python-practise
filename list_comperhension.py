@@ -3,7 +3,7 @@ doubled_list = list()
 for c in clicks:
     doubled_list.append(c*2)
 print(doubled_list)
-    
+
 
 student_score = [70, 60, 55, 64, 83, 22]
 passed_student = [s for s in student_score if s >= 60]
@@ -24,7 +24,8 @@ print(sum(age for age in ages if age > 20))
 print([age for age in ages if age >= 20])
 
 
-list =['cofee', 'tea', 'latte', 'coffee', 'tea', 'latte', 'coffee', 'tea', 'latte']
+list = ['cofee', 'tea', 'latte', 'coffee', 'tea',
+        'latte', 'coffee', 'tea', 'latte']
 price = [(item, 3.5) for item in list]
 print(price)
 
@@ -114,7 +115,8 @@ print(long_names)
 print(short_names)
 print(upper_names)
 
-countries = ['ethopia', 'egypt', 'Kenya', 'tanzania', 'united states', 'united kingdom']
+countries = ['ethopia', 'egypt', 'Kenya', 'tanzania',
+             'united states', 'united kingdom']
 long_countries = [c for c in countries if len(c) > 5]
 short_countries = [c for c in countries if len(c) <= 5]
 upper_countreis = [c.upper() for c in countries]
@@ -123,5 +125,3 @@ print(long_countries, short_countries, upper_countreis)
 age = [22, 34, 25, 11, 15, 33, 65]
 adult_age = [a for a in age if a >= 18]
 print(adult_age)
-
-
