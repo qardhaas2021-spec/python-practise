@@ -125,3 +125,16 @@ print(long_countries, short_countries, upper_countreis)
 age = [22, 34, 25, 11, 15, 33, 65]
 adult_age = [a for a in age if a >= 18]
 print(adult_age)
+
+
+names = ['dan', 'mario', 'andu']
+length = [len(n) for n in names if 'a' in n]
+print(length)
+
+
+l1 = [c.lower().upper() for c in 'abc']
+print(l1)
+
+
+l2 = [c.upper().lower() for c in 'hello']
+print(l2)
